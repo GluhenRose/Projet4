@@ -69,12 +69,15 @@ input::placeholder {
   background-color: #EAEAEA;
   border-radius: 20px;
   margin: 1rem 2rem 1rem 1rem;
+  position: relative;
   box-shadow: 4px 4px 1px black;
 }
 
 .picto {
   position: absolute;
-  left: 1rem;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: #9356DC;
   padding: 2px 6px;
   font-size: 14px;
@@ -105,6 +108,7 @@ input::placeholder {
 }
 
 .restaurants-card a {
+  position: relative;
   text-decoration: none;
 }
 .restaurants-card a .card {
@@ -121,7 +125,8 @@ input::placeholder {
 
 .new-restaurants {
   position: absolute;
-  right: 10%;
+  right: 10px;
+  top: 10px;
   background-color: #99E2D0;
   padding: 5px 10px;
   color: #008766;
@@ -154,6 +159,23 @@ input::placeholder {
   bottom: 50px;
   font-size: 26px;
   color: black;
+}
+.icone-love:hover .fa-regular.fa-heart {
+  display: none;
+}
+.icone-love:hover .fa-solid.fa-heart {
+  display: block;
+}
+
+.fa-regular.fa-heart {
+  display: block;
+}
+
+.fa-solid.fa-heart {
+  display: none;
+  background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 footer {
