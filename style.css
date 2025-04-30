@@ -18,6 +18,7 @@ header .logo {
 
 .location {
   background-color: #EAEAEA;
+  box-shadow: rgb(0, 0, 0) 0px 3px 8px;
 }
 .location .search-bar {
   border: none;
@@ -37,6 +38,7 @@ input::placeholder {
   background-color: #F6F6F6;
   text-align: center;
   padding: 2rem 3rem 3rem 3rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 4px 0px inset;
 }
 .title .h1 {
   font-size: 24px;
@@ -55,7 +57,7 @@ input::placeholder {
   background: linear-gradient(to bottom, #FF79DA, #9356DC);
   border-radius: 40px;
   padding: 1rem 2rem;
-  box-shadow: 4px 4px 1px black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .functioning {
@@ -70,7 +72,7 @@ input::placeholder {
   border-radius: 20px;
   margin: 1rem 2rem 1rem 1rem;
   position: relative;
-  box-shadow: 4px 4px 1px black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .picto {
@@ -88,14 +90,13 @@ input::placeholder {
 .picto-txt i {
   position: relative;
   left: 40px;
-  bottom: 37px;
+  top: 20px;
   font-size: 20px;
   color: #7E7E7E;
 }
 
 .picto-txt h3 {
   text-align: center;
-  padding-top: 2rem;
   font-size: 16px;
 }
 
@@ -204,6 +205,62 @@ footer img {
 .footer-txt ul li a i {
   font-size: 11px;
   padding-right: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 40px;
+  }
+  .picto-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+  }
+  .picto-txt h3 {
+    padding-top: 0;
+  }
+  .picto-txt i {
+    left: 0;
+    top: 0;
+  }
+  .functioning-list {
+    display: flex;
+  }
+  .fonctioning-card {
+    width: 30%;
+  }
+  .restaurants-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .restaurants-card a {
+    display: block;
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+  .restaurants-card a img {
+    object-fit: cover;
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
+  footer .logo-footer {
+    display: flex;
+    align-items: center;
+  }
+  footer ul {
+    display: flex;
+    gap: 40px;
+  }
+  footer ul .links {
+    display: flex;
+    gap: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
