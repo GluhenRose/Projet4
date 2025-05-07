@@ -1,3 +1,113 @@
+.logo-header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 2rem;
+}
+
+.picto-return {
+  position: absolute;
+  top: 40px;
+  left: 15px;
+}
+
+h1 {
+  padding: 1rem;
+  font-family: Shrikhand;
+  position: relative;
+  font-size: 28px;
+}
+
+.icone-heart {
+  position: absolute;
+  left: 320px;
+  top: 100px;
+}
+.icone-heart:hover .fa-regular.fa-heart {
+  display: none;
+}
+.icone-heart:hover .fa-solid.fa-heart {
+  display: block;
+}
+
+.fa-regular.fa-heart {
+  display: block;
+}
+
+.fa-solid.fa-heart {
+  display: none;
+  background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 200;
+}
+
+.menu-content {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  padding: 1rem;
+}
+.menu-content h3 {
+  font-size: 18px;
+  margin: 0;
+}
+.menu-content p {
+  font-size: 15px;
+  margin: 0;
+  margin-top: 3px;
+  font-weight: 200;
+}
+
+.price {
+  position: absolute;
+  right: 30px;
+  top: 220px;
+  font-weight: 600;
+}
+
+.button-command {
+  font-size: 16px;
+  border: none;
+  color: white;
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  border-radius: 40px;
+  padding: 1rem 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+footer {
+  background-color: #353535;
+  padding: 2rem 1rem 1rem 1rem;
+}
+footer img {
+  height: 18px;
+  filter: invert(1);
+}
+
+.footer-txt {
+  font-size: 16px;
+}
+.footer-txt ul {
+  list-style-type: none;
+  padding: 0;
+}
+.footer-txt ul li {
+  margin-bottom: 5px;
+}
+.footer-txt ul li a {
+  color: white;
+  text-decoration: none;
+}
+.footer-txt ul li a i {
+  font-size: 11px;
+  padding-right: 5px;
+}
+
 * {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;

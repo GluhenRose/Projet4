@@ -1,0 +1,148 @@
+@mixin no-border {
+    border: none;
+}
+
+  @mixin size-txt-primary {
+    font-size: 16px;
+}
+
+@mixin color-txt {
+    color: white;
+}
+
+@mixin no-decoration {
+    text-decoration: none;
+}
+
+@mixin bttn-gradient {
+    background: linear-gradient(to bottom, #FF79DA, #9356DC);
+}
+
+@mixin i-footer {
+    font-size: 11px;
+    padding-right: 5px;
+}
+
+@mixin box-shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.logo-header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 2rem;
+}
+
+.picto-return {
+    position: absolute;
+    top: 40px;
+    left: 15px;
+}
+
+h1 {
+    padding: 1rem;
+    font-family: Shrikhand;
+    position: relative;
+    font-size: 28px;
+}
+
+.icone-heart {
+    
+    position: absolute;
+    left: 320px;
+    top: 100px;
+  
+    &:hover {
+      .fa-regular.fa-heart {
+        display: none;
+      }
+      .fa-solid.fa-heart {
+        display: block;
+      }
+    }
+  }
+  
+  .fa-regular.fa-heart {
+    display: block;
+  }
+  
+  .fa-solid.fa-heart {
+    display: none;
+    background: linear-gradient(180deg,rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+h2 {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.menu-content {
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1rem;
+    h3 {
+        font-size: 18px;
+        margin: 0;
+    }
+    p {
+        font-size: 15px;
+        margin: 0;
+        margin-top: 3px;
+        font-weight: 200;
+    }
+}
+
+.price {
+    position: absolute;
+    right: 30px;
+    top: 220px;
+    font-weight: 600;
+}
+
+.button-command {
+    @include size-txt-primary;
+    @include no-border;
+    @include color-txt;
+    @include bttn-gradient;
+    border-radius: 40px;
+    padding: 1rem 2rem;
+    @include box-shadow;
+}
+
+footer {
+    background-color: #353535;
+    padding: 2rem 1rem 1rem 1rem;
+    img {
+      height: 18px;
+      filter: invert(1);
+    }
+}
+  
+.footer-txt {
+    @include size-txt-primary;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        li {
+            margin-bottom: 5px;
+            a {
+                @include color-txt;
+                @include no-decoration;
+                i {
+                    @include i-footer;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+
+    
+}
