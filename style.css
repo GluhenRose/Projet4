@@ -1,76 +1,92 @@
-.logo-header {
+#restaurants .logo-header {
   display: flex;
   justify-content: center;
   position: relative;
   margin: 2rem;
 }
-
-.picto-return {
+#restaurants .picto-return {
   position: absolute;
   top: 40px;
   left: 15px;
 }
-
-h1 {
-  padding: 1rem;
-  font-family: Shrikhand;
+#restaurants .img-background img {
+  width: 100%;
+}
+#restaurants .menu-restaurant {
   position: relative;
+  background-color: #F6F6F6;
+  border-radius: 20px 20px 0px 0px;
+  padding: 1rem;
+}
+#restaurants h1 {
+  font-family: Shrikhand;
   font-size: 28px;
 }
-
-.icone-heart {
+#restaurants .icone-heart {
   position: absolute;
   left: 320px;
-  top: 100px;
+  top: 45px;
+  font-size: 26px;
 }
-.icone-heart:hover .fa-regular.fa-heart {
+#restaurants .icone-heart:hover .fa-regular.fa-heart {
   display: none;
 }
-.icone-heart:hover .fa-solid.fa-heart {
+#restaurants .icone-heart:hover .fa-solid.fa-heart {
   display: block;
 }
-
-.fa-regular.fa-heart {
+#restaurants .fa-regular.fa-heart {
   display: block;
 }
-
-.fa-solid.fa-heart {
+#restaurants .fa-solid.fa-heart {
   display: none;
   background: linear-gradient(180deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-h2 {
+#restaurants h2 {
   font-size: 16px;
   font-weight: 200;
 }
-
-.menu-content {
+#restaurants h2::after {
+  content: "";
+  background-color: #99E2D0;
+  width: 50px;
+  height: 2px;
+  display: block;
+  margin-top: 0.3rem;
+}
+#restaurants .menu-content {
   position: relative;
   background-color: white;
   border-radius: 20px;
   padding: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 100;
 }
-.menu-content h3 {
+#restaurants .menu-content h3 {
   font-size: 18px;
   margin: 0;
+  font-weight: 600;
 }
-.menu-content p {
+#restaurants .menu-content p {
   font-size: 15px;
   margin: 0;
   margin-top: 3px;
-  font-weight: 200;
 }
-
-.price {
+#restaurants .menu-content .price {
   position: absolute;
-  right: 30px;
-  top: 220px;
+  right: 10px;
+  bottom: 10px;
+}
+#restaurants .price {
   font-weight: 600;
 }
-
-.button-command {
+#restaurants .btn-command {
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+}
+#restaurants .button-command {
   font-size: 16px;
   border: none;
   color: white;
@@ -79,33 +95,41 @@ h2 {
   padding: 1rem 2rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-
-footer {
+#restaurants footer {
   background-color: #353535;
   padding: 2rem 1rem 1rem 1rem;
 }
-footer img {
+#restaurants footer img {
   height: 18px;
   filter: invert(1);
 }
-
-.footer-txt {
+#restaurants .footer-txt {
   font-size: 16px;
 }
-.footer-txt ul {
+#restaurants .footer-txt ul {
   list-style-type: none;
   padding: 0;
 }
-.footer-txt ul li {
+#restaurants .footer-txt ul li {
   margin-bottom: 5px;
 }
-.footer-txt ul li a {
+#restaurants .footer-txt ul li a {
   color: white;
   text-decoration: none;
 }
-.footer-txt ul li a i {
+#restaurants .footer-txt ul li a i {
   font-size: 11px;
   padding-right: 5px;
+}
+@media screen and (min-width: 768px) {
+  #restaurants .menu-restaurant {
+    margin-left: 7rem;
+    margin-right: 7rem;
+  }
+  #restaurants .img-background img {
+    height: 400px;
+    object-fit: cover;
+  }
 }
 
 * {
@@ -208,6 +232,8 @@ input::placeholder {
 .picto-txt h3 {
   text-align: center;
   font-size: 16px;
+  position: relative;
+  bottom: 16px;
 }
 
 .restaurants {
@@ -330,6 +356,8 @@ footer img {
   }
   .picto-txt h3 {
     padding-top: 0;
+    position: relative;
+    top: 1px;
   }
   .picto-txt i {
     left: 0;
