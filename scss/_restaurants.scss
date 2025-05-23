@@ -2,7 +2,7 @@
     border: none;
 }
 
-  @mixin size-txt-primary {
+@mixin size-txt-primary {
     font-size: 16px;
 }
 
@@ -43,28 +43,32 @@
 
     .img-background img {
         width: 100%;
+        position: relative;
     }
     
     .menu-restaurant {
         position: relative;
         background-color: #F6F6F6;
         border-radius: 20px 20px 0px 0px;
-        padding: 1rem;
+        padding: 2rem;
+        margin-top: -30px;
     }
     .title-section {
         position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 
     h1 {
         font-family: Shrikhand;
         font-size: 28px;
+        
     }
     
     .icone-heart {
-        position: absolute;
-        left: 320px;
-        top: 5px;
         font-size: 26px;
+        cursor: pointer;
       
         &:hover {
           .fa-regular.fa-heart {
@@ -106,26 +110,89 @@
         position: relative;
         background-color: white;
         border-radius: 20px;
-        padding: 1rem;
         margin-bottom: 1rem;
         font-weight: 100;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        cursor: pointer;
+
+        .text-price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1rem;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .menu-txt {
+            overflow: hidden;
+        }
+
         h3 {
             font-size: 18px;
             margin: 0;
             font-weight: 600;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
+
         p {
             font-size: 15px;
             margin: 0;
             margin-top: 3px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
-        .price {
-            position: absolute;
-            right: 10px;
-            bottom: 10px;
+
+
+        .picto-check {
+            background-color: #99E2D0;
+            height: 74px;
+            width: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: -74px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .fa-solid.fa-circle-check{
+            color: white;
+            font-size: 20px;
+            transition-timing-function: cubic-bezier(.5,.51,.5,.51);
+        }
+
+        &:hover .picto-check {
+            margin-right: 0;
         }
     }
+
+}
+
+    .starter-menu {
+        .menu-content{
+            animation: slide-show 1s ease-in-out both;
+        }
+    }
+
+    .dish-menu {
+        .menu-content{
+            animation: slide-show 2s ease-in-out both;
+        }
+    }
+
+    .dessert-menu {
+        .menu-content{
+            animation: slide-show 3s ease-in-out both;
+        }
+    }
+
     
+
     .price {
         font-weight: 600;
     }
@@ -144,6 +211,12 @@
         border-radius: 40px;
         padding: 1rem 2rem;
         @include box-shadow;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.80;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 4px 6px 5px, rgba(0, 0, 0, 0.3) 0px 2px 7px 5px;
+        }
     }
     
     footer {
@@ -190,8 +263,8 @@
 
     .title-section {
         h1 {
-            position: relative;
             left: 150px;
+            text-align: center;
         }
         .icone-heart {
             left: 450px;
@@ -199,4 +272,14 @@
     }
 }
 
+@-webkit-keyframes slide-show {
+    0% {
+        opacity:0;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(10%);
+    }
 }
+

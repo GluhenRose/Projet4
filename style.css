@@ -11,25 +11,28 @@
 }
 #restaurants .img-background img {
   width: 100%;
+  position: relative;
 }
 #restaurants .menu-restaurant {
   position: relative;
   background-color: #F6F6F6;
   border-radius: 20px 20px 0px 0px;
-  padding: 1rem;
+  padding: 2rem;
+  margin-top: -30px;
 }
 #restaurants .title-section {
   position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 #restaurants h1 {
   font-family: Shrikhand;
   font-size: 28px;
 }
 #restaurants .icone-heart {
-  position: absolute;
-  left: 320px;
-  top: 5px;
   font-size: 26px;
+  cursor: pointer;
 }
 #restaurants .icone-heart:hover .fa-regular.fa-heart {
   display: none;
@@ -62,34 +65,82 @@
   position: relative;
   background-color: white;
   border-radius: 20px;
-  padding: 1rem;
   margin-bottom: 1rem;
   font-weight: 100;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+#restaurants .menu-content .text-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  width: 100%;
+  overflow: hidden;
+}
+#restaurants .menu-content .menu-txt {
+  overflow: hidden;
 }
 #restaurants .menu-content h3 {
   font-size: 18px;
   margin: 0;
   font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 #restaurants .menu-content p {
   font-size: 15px;
   margin: 0;
   margin-top: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-#restaurants .menu-content .price {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
+#restaurants .menu-content .picto-check {
+  background-color: #99E2D0;
+  height: 74px;
+  width: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -74px;
+  transition: 0.3s ease-in-out;
 }
-#restaurants .price {
+#restaurants .menu-content .fa-solid.fa-circle-check {
+  color: white;
+  font-size: 20px;
+  transition-timing-function: cubic-bezier(0.5, 0.51, 0.5, 0.51);
+}
+#restaurants .menu-content:hover .picto-check {
+  margin-right: 0;
+}
+
+.starter-menu .menu-content {
+  animation: slide-show 1s ease-in-out both;
+}
+
+.dish-menu .menu-content {
+  animation: slide-show 2s ease-in-out both;
+}
+
+.dessert-menu .menu-content {
+  animation: slide-show 3s ease-in-out both;
+}
+
+.price {
   font-weight: 600;
 }
-#restaurants .btn-command {
+
+.btn-command {
   display: flex;
   justify-content: center;
   margin: 3rem;
 }
-#restaurants .button-command {
+
+.button-command {
   font-size: 16px;
   border: none;
   color: white;
@@ -97,53 +148,70 @@
   border-radius: 40px;
   padding: 1rem 2rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  cursor: pointer;
 }
-#restaurants footer {
+.button-command:hover {
+  opacity: 0.8;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 4px 6px 5px, rgba(0, 0, 0, 0.3) 0px 2px 7px 5px;
+}
+
+footer {
   background-color: #353535;
   padding: 2rem 1rem 1rem 1rem;
 }
-#restaurants footer img {
+footer img {
   height: 18px;
   filter: invert(1);
 }
-#restaurants .footer-txt {
+
+.footer-txt {
   font-size: 16px;
 }
-#restaurants .footer-txt ul {
+.footer-txt ul {
   list-style-type: none;
   padding: 0;
 }
-#restaurants .footer-txt ul li {
+.footer-txt ul li {
   margin-bottom: 5px;
 }
-#restaurants .footer-txt ul li a {
+.footer-txt ul li a {
   color: white;
   text-decoration: none;
 }
-#restaurants .footer-txt ul li a i {
+.footer-txt ul li a i {
   font-size: 11px;
   padding-right: 5px;
 }
+
 @media screen and (min-width: 768px) {
-  #restaurants .img-background img {
+  .img-background img {
     height: 400px;
     object-fit: cover;
   }
-  #restaurants .menu-restaurant {
+  .menu-restaurant {
     margin-left: 7rem;
     margin-right: 7rem;
     padding-right: 8rem;
     padding-left: 8rem;
   }
-  #restaurants .title-section h1 {
-    position: relative;
+  .title-section h1 {
     left: 150px;
+    text-align: center;
   }
-  #restaurants .title-section .icone-heart {
+  .title-section .icone-heart {
     left: 450px;
   }
 }
-
+@-webkit-keyframes slide-show {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -155,6 +223,58 @@ body {
   margin: 0;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: loading 2.5s ease-in-out both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader .hypnotic {
+  width: 67.2px;
+  height: 28px;
+  border: 2.2px solid #ff79da;
+  border-radius: 50%;
+  display: grid;
+  animation: hypnotic-ds34hk 2s infinite linear;
+}
+.loader .hypnotic:before,
+.loader .hypnotic:after {
+  content: "";
+  grid-area: 1/1;
+  border: inherit;
+  border-radius: 50%;
+  animation: inherit;
+  animation-duration: 3s;
+}
+.loader .hypnotic:after {
+  --s: -1;
+}
+@keyframes hypnotic-ds34hk {
+  100% {
+    transform: rotate(calc(var(--s, 1) * 1turn));
+  }
+}
+
+@keyframes loading {
+  0% {
+    z-index: 999999;
+    opacity: 1;
+  }
+  80% {
+    z-index: 999999;
+    opacity: 1;
+  }
+  100% {
+    z-index: -1;
+    opacity: 0;
+  }
+}
 header {
   text-align: center;
 }
@@ -171,6 +291,8 @@ header .logo {
   margin: 1rem;
   background-color: #EAEAEA;
   font-size: 16px;
+  text-align: center;
+  outline: none;
 }
 .location .search-bar .i {
   color: #353535;

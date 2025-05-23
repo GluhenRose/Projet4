@@ -156,8 +156,68 @@
       "wdth" 100;
 }
 
+
 body {
   margin: 0;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation: loading 2.5s ease-in-out both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hypnotic {
+    width: 67.2px;
+    height: 28px;
+    border: 2.2px solid #ff79da;
+    border-radius: 50%;
+    display: grid;
+    animation: hypnotic-ds34hk 2s infinite linear;
+ }
+ 
+ .hypnotic:before,
+ .hypnotic:after {
+    content: "";
+    grid-area: 1/1;
+    border: inherit;
+    border-radius: 50%;
+    animation: inherit;
+    animation-duration: 3s;
+ }
+ 
+ .hypnotic:after {
+    --s: -1;
+ }
+ 
+ @keyframes hypnotic-ds34hk {
+    100% {
+       transform: rotate(calc(var(--s,1)*1turn));
+    }
+ }
+}
+
+@keyframes loading {
+  0% { 
+    z-index: 999999;
+    opacity: 1;
+  }
+
+  80% { 
+    z-index: 999999;
+    opacity: 1;
+  }
+
+  100% {
+    z-index: -1;
+    opacity: 0;
+  }
 }
 
 header {
@@ -174,6 +234,8 @@ header {
     @include marge-one;
     @include background-primary;
     @include size-txt-primary;
+    text-align: center;
+    outline: none;
     .i {
       @include color-head-foot;
     }
