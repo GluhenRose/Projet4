@@ -235,7 +235,7 @@ header {
     @include background-primary;
     @include size-txt-primary;
     text-align: center;
-    outline: none;
+    
     .i {
       @include color-head-foot;
     }
@@ -271,6 +271,7 @@ input::placeholder {
   border-radius: 40px;
   padding: 1rem 2rem;
   @include box-shadow;
+  cursor: pointer;
 }
 
 .functioning {
